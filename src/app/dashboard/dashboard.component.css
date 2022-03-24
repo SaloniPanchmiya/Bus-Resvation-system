@@ -1,0 +1,66 @@
+#header{
+    background-color: #5918bb;
+    padding: 13px;
+}
+
+.header button{
+    float: right;
+    padding: 5px;
+    font-size : 20px;
+    width: 8%;
+    margin-right: 15px;
+    border-radius: 12px;
+    
+}
+.user-functions{
+    padding-top: 20px;
+    margin: auto;
+    height: 600px;
+    text-align: center;
+    
+}
+.user-functions button{
+    width: 200px;
+    font-size: 20px;
+    border-radius: 12px;
+    border:1px solid rgb(9, 236, 47);
+}
+.ig{
+    background-repeat: no-repeat;
+    background-image: url("https://cdn.southamericabackpacker.com/wp-content/uploads/2020/01/bruno-de-regge-1AQltGe-iuo-unsplash-1536x1024.jpg");
+    background-size: cover;
+    color: yellow;
+    background-color: aqua;
+}
+ul{
+    list-style: none;
+    float: left;
+}
+footer {
+    background-color:  #563d7c;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.form1{
+    padding-top: 50px;
+}
+th{
+	background-color: black;
+	color: white;
+}
+table{
+    width: 500px;
+}
+.form-control{
+    width: 500px;
+}
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+.form-row {
+    margin-right: 0px;
+    margin-left: 0px;
+}

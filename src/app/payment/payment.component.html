@@ -1,0 +1,152 @@
+<div id="header" style="padding-left: 120px;">
+    
+    <h1 align="center">Welcome to Payment Portal</h1>
+    
+</div>
+<div class="ig">
+    <div class="outer">
+        <ul style="float: left; padding-top: 30px;">
+            <li><button class="btn  btn-success" (click)="show(1)" style="background-color: rgb(11, 243, 42);">Credit/Debit Card</button></li> <br>
+            <li><button class="btn btn-success" (click)="show(2)" style="background-color: rgb(10, 204, 42);">UPI</button></li> <br>
+            <li><button class="btn btn-success" (click)="show(3)" style="background-color: rgb(11, 212, 11);">Wallet</button></li> <br>
+        </ul>
+    
+        
+        <div class="column" id="show1" style="padding-top: 0px;">
+        
+           <div class="header">
+               Credit/Debit Card
+            </div>
+            <div class="price">
+            <form [formGroup]="cardForm">
+                <div class="form-group" style="padding-top: 10px;">
+                    <div *ngIf="cardForm.controls.cardHolderName.errors && 
+                    (cardForm.controls.cardHolderName.touched || cardForm.controls.cardHolderName.dirty)" style="color: red;">
+                        Card Holder Name required
+                    </div>
+                   
+                    <label for="cardHolderName">Card Holder Name</label>
+                    <input class="form-control" type="text" name="cardHolderName" id="cardHolderName" formControlName="cardHolderName">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="cardForm.controls.cardNumber.errors && 
+                    (cardForm.controls.cardNumber.touched ||cardForm.controls.cardNumber.dirty)" style="color: red;">
+                        8-digit Card Number Required
+                    </div>
+                    <label for="cardNumber">8-digit Card Number</label>
+                    <input class="form-control" type="text" name="cardNumber" id="cardNumber" formControlName="cardNumber">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="cardForm.controls.cvv.errors && 
+                    (cardForm.controls.cvv.touched || cardForm.controls.cvv.dirty)" style="color: red;">
+                       CVV is required
+                    </div>
+                    <label for="cvv">CVV</label>
+                    <input class="form-control" type="number" name="cvv" id="cvv" formControlName="cvv">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="cardForm.controls.validTill.errors && 
+                    (cardForm.controls.validTill.touched || cardForm.controls.validTill.dirty)" style="color: red;">
+                       Valid Till required
+                    </div>
+                    <label for="validTill">Valid Till</label>
+                    <input class="form-control" type="month" name="validTill" id="validTill" formControlName="validTill">
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <input class="bn" type="submit" routerLink="/payment-success" value="Complete Payment" [disabled]="cardForm.invalid">
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="column1" id="show2" style="display: none; padding-top: 30px;">
+            
+            <form [formGroup]="upiForm"> 
+                <div class="form-group">
+                    <div *ngIf="upiForm.controls.firstName.errors && 
+                    (upiForm.controls.firstName.touched || upiForm.controls.firstName.dirty)" style="color: red;">
+                       First name Required
+                    </div>
+                    <label for="firstName">First Name</label>
+                    <input class="form-control" type="text" name="firstName" id="firstName" formControlName="firstName">
+                </div>
+                
+                <div class="form-group">
+                    <div *ngIf="upiForm.controls.lastName.errors && 
+                    (upiForm.controls.lastName.touched || upiForm.controls.lastName.dirty)" style="color: red;">
+                       Last name Required
+                    </div>
+                    <label for="lastName">Last Name</label>
+                    <input class="form-control" type="text" name="lastName" id="lastName" formControlName="lastName">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="upiForm.controls.phoneNo.errors && 
+                    (upiForm.controls.phoneNo.touched || upiForm.controls.phoneNo.dirty)" style="color: red;">
+                       Phone Number is Required
+                    </div>
+                    <label for="phoneNo">Phone Number</label>
+                    <input class="form-control" type="text" name="phoneNo" id="phoneNo" formControlName="phoneNo">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="upiForm.controls.upi.errors && 
+                    (upiForm.controls.upi.touched || upiForm.controls.upi.dirty)" style="color: red;">
+                       Valid UPI ID is required
+                    </div>
+                    <label for="upi">Valid UPI ID</label>
+                    <input class="form-control" type="text" name="upi" id="upi" formControlName="upi">
+                </div>
+                <input type="submit" routerLink="/payment-success" value="Complete Payment" class="btn btn-primary" [disabled]="upiForm.invalid">
+                </form>
+        
+    </div>
+
+        <div class="column" id="show3" style="display: none; padding-top: 30px;">
+            
+            <form [formGroup]="walletForm"> 
+                <div class="form-group">
+                    <div *ngIf="walletForm.controls.firstName.errors && 
+                    (walletForm.controls.firstName.touched || walletForm.controls.firstName.dirty)" style="color: red;">
+                       First name Required
+                    </div>
+                    <label for="firstName">First Name</label>
+                    <input class="form-control" type="text" name="firstName" id="firstName" formControlName="firstName">
+                </div>
+                
+                <div class="form-group">
+                    <div *ngIf="walletForm.controls.lastName.errors && 
+                    (walletForm.controls.lastName.touched || walletForm.controls.lastName.dirty)" style="color: red;">
+                       Last name Required
+                    </div>
+                    <label for="lastName">Last Name</label>
+                    <input class="form-control" type="text" name="lastName" id="lastName" formControlName="lastName">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="walletForm.controls.phoneNo.errors && 
+                    (walletForm.controls.phoneNo.touched || walletForm.controls.phoneNo.dirty)" style="color: red;">
+                       Phone Number is Required
+                    </div>
+                    <label for="phoneNo">First Name</label>
+                    <input class="form-control" type="text" name="phoneNo" id="phoneNo" formControlName="phoneNo">
+                </div>
+                <div class="form-group">
+                    <div *ngIf="walletForm.controls.upi.errors && 
+                    (walletForm.controls.upi.touched || walletForm.controls.upi.dirty)" style="color: red;">
+                       Confirmation for Paying through wallet is required
+                    </div>
+                    <label for="wallet">Wallet</label>&nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" id="wallet" name="wallet"
+                            formControlName="wallet">
+                </div>
+                <input type="submit" routerLink="/payment-success" value="Complete Payment" class="btn btn-primary" [disabled]="walletForm.invalid">
+                </form>
+        </div>
+        
+    </div>
+    
+
+</div>
+
+
+<footer>
+    <p class="float-right"></p>
+    <p>Ⓒ2020-2021 Safr Travels All rights reserved</p>
+</footer>

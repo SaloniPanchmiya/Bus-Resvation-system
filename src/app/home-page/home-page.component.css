@@ -1,0 +1,93 @@
+.pic{
+    margin: auto;
+    background-image: url("https://www.charteredbus.in/banner-aa25a75b4376f1541ca192d626a100670ab2161d22fbbdb87b6d5dab1b98c513.jpg");
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    padding-top: 130px;
+    color: rgb(42, 10, 117);
+}
+.form1{
+    
+    display: flex;
+
+    margin-left: 300 px;
+    margin-right: 450 px;
+  
+    
+    
+}
+.btn-log-1
+{
+    width:100px;
+    height:50px;
+    margin-left: 55px;  
+}
+
+
+.btn-log-2
+{
+    width:100px;
+    height:50px;
+    margin-left: 130px;
+}
+.log-in
+{
+    width: 220px;
+    height: 220px;
+}
+
+
+.form-inline
+{
+    padding-left: 130px;
+}
+#logo         {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    width: 49%;
+  }
+  #logo img    {
+    width: 50px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  nav     {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+  }
+  nav ul   {
+    list-style: none;
+    margin: 0;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a    {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: 0.3s ease all;
+  }
+  nav ul li a:hover   {
+    background: #444;
+  }
+  header   {
+    background: #222;
+    color: #FFF;
+    padding: 20px 30px;
+  }
+  .welcome{
+    justify-content: center;
+    
+    display: block;
+  
+    padding-left: 150 px;
+  }

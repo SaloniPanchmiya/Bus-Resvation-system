@@ -1,0 +1,257 @@
+<div class="ig">
+
+    <div class="options" onload="showName()">
+        <div id="header" style="padding-left: 120px;">
+            <div class="header" style="margin-top: 10px;">
+                <button class="btn btn-danger" type="submit" (click)="Logout()">Logout</button>
+            </div>
+            <h1 align="center">Welcome {{uName}}</h1>
+
+        </div>
+        <div id="login-complete">
+
+            <div class="user-functions">
+                <ul>
+
+                    <!--li><button class="btn btn-outline-info btn-success" (click)="show(1)">Upcoming Bookings</button></li--> <br>
+                    <!--li><button class="btn btn-outline-info btn-success" (click)="show(2)">Booking History</button></li--> <br>
+                    <li><button class="btn btn-outline-info btn-success" (click)="show(3)">Profile</button></li> <br>
+                    <li><button class="btn btn-outline-info  btn-success" (click)="show(4)">Change Password</button></li> <br>
+                    <!--li><button class="btn btn-outline-info btn-success" (click)="show(5)">Wallet</button></li--> <br>
+                    <li><button class="btn btn-outline-info btn-danger" (click)="show(6)">Cancel</button></li> <br>
+                </ul>
+
+                <div class="form1"  >
+                    <form class="form-inline" style="padding-left: 200px;" >
+                        <!-- <input class="form-control mr-sm-2" type="search" placeholder="From" aria-label="Search">
+                        <input class="form-control mr-sm-2" type="search" placeholder="To" aria-label="Search">
+                        <input class="form-control mr-sm-2" type="date" placeholder="" aria-label="Search"> -->
+                        <button style="margin-left: 300px;" routerLink="/search-bus-page" class="btn btn-outline-primary my-2 my-sm-0  btn-light"
+                            type="submit">Search Buses</button> &nbsp;
+                        
+                    </form>
+                </div>
+                <div id="choice1" style="padding-top: 70px; margin-left: 439px;">
+                    <table cellpadding=20 cellspacing=30 class="table table-striped table-dark">
+                        <!--thead>
+                            <tr>
+                                <th scope="col">Booking No</th>
+                                <th scope="col">Ticket No</th>
+                                <th scope="col">Bus Id</th>
+                                <th scope="col">Source</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Arrival Date</th>
+                                <th scope="col">Departure Date</th>
+                                <th scope="col">Arrival Time</th>
+                                <th scope="col">Departure time</th>
+                                <th scope="col">No of Seats</th>
+                                <th scope="col">Selected Seat</th>
+                                <th scope="col">Fare</th>
+                            </tr>
+                        </thead-->
+                        <tbody>
+                            <!--<tr *ngFor='let x of bus'>-->
+                            <!--tr>
+                                <th scope="row">1</th>
+                                <td>7496</td>
+                                <td>100</td>
+                                <td>Delhi</td>
+                                <td>Pune</td>
+                                <td>01-oct-2022</td>
+                                <td>02-oct-2022</td>
+                                <td>9.00 a.m.</td>
+                                <td>12.00 a.m.</td>
+                                <td>2</td>
+                                <td>3,4</td>
+                                <td>1200</td>
+                            </tr-->
+                            <!--tr>
+                                <th scope="row">2</th>
+                                <td>8579</td>
+                                <td>101</td>
+                                <td>Delhi</td>
+                                <td>Pune</td>
+                                <td>01-oct-2022</td>
+                                <td>02-oct-2022</td>
+                                <td>8.30 p.m.</td>
+                                <td>1.00 a.m.</td>
+                                <td>3</td>
+                                <td>1,2,3</td>
+                                <td>1800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>9867</td>
+                                <td>102</td>
+                                <td>Mumbai</td>
+                                <td>Kolkata</td>
+                                <td>01-oct-20202</td>
+                                <td>02-oct-2022</td>
+                                <td>8.30 p.m.</td>
+                                <td>1.00 a.m.</td>
+                                <td>1</td>
+                                <td>10</td>
+                                <td>600</td>
+                            </tr-->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="choice2" style="display: none; margin-left: 500px;">
+                    <table cellpadding=20 cellspacing=30 class="table table-striped table-dark">
+                        <!--thead>
+                            <tr>
+                                <th scope="col">Booking No</th>
+                                <th scope="col">Bus Id</th>
+                                <th scope="col">Source</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Fare</th>
+                            </tr>
+                        </thead-->
+                        <tbody>
+                            <!--<tr *ngFor='let x of bus'>-->
+                            <!--tr>
+                                <th scope="row">1</th>
+                                <td>100</td>
+                                <td>Delhi</td>
+                                <td>Pune</td>
+                                <td>1200</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>101</td>
+                                <td>Delhi</td>
+                                <td>Pune</td>
+                                <td>1800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>102</td>
+                                <td>Mumbai</td>
+                                <td>Kolkata</td>
+                                <td>600</td>
+                            </tr-->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="choice3" style="display: none; margin-left: 500px;">
+                    <table cellpadding=20 cellspacing=30 class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <!-- <th scope="col">Dob</th> -->
+                                <th scope="col">Email Id</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Gender</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--<tr *ngFor='let x of bus'>-->
+                            <tr *ngFor='let x of users'>
+                                <td *ngIf='x==user'>{{x.firstName}}</td>
+                                <td *ngIf='x==user'>{{x.lastName}}</td>
+                                <!-- <td *ngIf='x==user'>{{x.Dob}}</td> -->
+                                <td *ngIf='x==user'>{{x.emailId}}</td>
+                                <td *ngIf='x==user'>{{x.phoneNo}}</td>
+                                <td *ngIf='x==user'>{{x.gender}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="choice4" style="display: none; margin-left: 500px;">
+                    <form [formGroup]="passForm" (ngSubmit)="onSubmitPass()">
+                        <div class="form-group row">
+                            <label for="ps1" class="col-sm-2 col-form-label"
+                                style="background-color: cornflowerblue; border-radius: 5px;">Old Password</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="ps1" placeholder="Password"
+                                    formControlName="ps1">
+                                <div *ngIf="submitted && passForm.controls.ps1.errors" class="error">
+                                    <div class="text-danger" *ngIf="passForm.controls.ps1.errors.required">Old Password is
+                                        required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="ps2" class="col-sm-2 col-form-label"
+                                style="background-color: cornflowerblue; border-radius: 5px;">New Password</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="ps2" placeholder="Password"
+                                    formControlName="ps2">
+                                <div *ngIf="submitted && passForm.controls.ps2.errors" class="error">
+                                    <div class="text-danger" *ngIf="passForm.controls.ps2.errors.required">New Password is
+                                        required</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <div *ngIf="invalidLogin" class="error">
+                                <div class="text-danger">Invalid credentials.</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="choice5" style="display: none; margin-left: 500px;">
+                    <table cellpadding=20 cellspacing=30 class="table table-striped table-dark">
+                        <!--thead>
+                            <tr>
+                                <th scope="col" style="text-align: center;">Your Current Balance</th>
+                            </tr>
+                        </thead-->
+                        <tbody>
+                            <!--<tr *ngFor='let x of bus'>-->
+                            <!--tr>
+                                <td>5000</td>
+                            </tr-->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="choice6" style="display: none; margin-left: 500px;">
+                    <form [formGroup]="cancelForm" (ngSubmit)="onSubmitCancel()">
+                        <div class="form-group row">
+                            <label for="ps1" class="col-sm-2 col-form-label"
+                                style="background-color: cornflowerblue; border-radius: 5px;">Email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="email" placeholder="Email Id" formControlName="email">
+                            </div>
+                            <div *ngIf="submittedCancel && cancelForm.controls.email.errors" class="error">
+                                <div class="text-danger" *ngIf="cancelForm.controls.email.errors.required">Email is
+                                    required</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="ticketNo" class="col-sm-2 col-form-label"
+                                style="background-color: cornflowerblue; border-radius: 5px;">Ticket No</label>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control" id="ticketNo" placeholder="Ticket No" formControlName="ticketNo">
+                            </div>
+                            <div *ngIf="submittedCancel && cancelForm.controls.ticketNo.errors" class="error">
+                                <div class="text-danger" *ngIf="cancelForm.controls.ticketNo.errors.required">Ticket No is
+                                    required</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-primary">Cancel
+                                    Ticket</button>
+                            </div>
+                            <div *ngIf="invalidCancel" class="error">
+                                <div class="text-danger">Invalid credentials.</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="float-right"></p>
+        <p>Ⓒ2022-2023 Safe Travels All rights reserved</p>
+    </footer>
+</div>

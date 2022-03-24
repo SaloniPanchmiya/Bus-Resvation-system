@@ -1,0 +1,66 @@
+
+.ig{
+  margin: auto;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWaP11UJGi_kFe6DCBLAL6ArxCCOGVdhKVGg&usqp=CAU");
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: cover;
+}
+.column{
+  width: 500px;
+  margin-left: 500px;
+  background-color: rgb(8, 192, 248);
+}
+.column1{
+  width: 500px;
+  margin-left: 500px;
+  background-color: rgb(222, 236, 16);
+}
+
+.outer{
+    padding-top: 100px;
+}
+.price {
+  border: 1px solid rgb(230, 39, 39);
+  background-color: rgb(37, 92, 211);
+
+}
+
+.column .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.bn {
+  background-color: #4CAF50;
+  border: none;
+  color: rgb(78, 182, 252);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+footer {
+  background-color:  #563d7c;
+  padding: 10px;
+  text-align: center;
+  color: rgb(25, 4, 82);
+}
+ul{
+  list-style: none;
+  float: left;
+}
+button{
+  width: 200px;
+  font-size: 20px;
+  border-radius: 12px;
+}
+#header{
+background-color: #563d7c;
+padding: 13px;
+}

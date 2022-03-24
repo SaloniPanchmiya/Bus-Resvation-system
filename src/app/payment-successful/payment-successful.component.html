@@ -1,0 +1,33 @@
+<div id="header">
+    <h1 align="center">Payment Status</h1>
+</div>
+<div id="ig" style="margin-top: 50px;">
+    <div id="pay1">
+    <div id="pay">
+        <div>
+       
+        <h1>Payment Successful!</h1>
+        <h2> Following are your Booking Details</h2>
+        <button class="btn btn-primary" (click)="showRecsipt()">Show Details</button>
+        <h5>{{"First-Name="+user.firstName}}</h5>
+        <h5>{{"Last-name="+user.lastName}}</h5>
+        <h5>{{"Phone number="+user.phoneNo}}</h5>
+        <h5>{{"Email="+user.emailId}}</h5>
+        <h5>{{"Seat no=23"}}</h5>
+        <!-- <h5>{{"Date Of Journey="}}</h5> -->
+    </div>
+           
+ 
+   
+    <br>
+    <p>Thank You For Using Safe Travel as your Travelling Partner!</p>
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="printPage()">print</button>
+      </div>
+</div>
+</div>
+<footer style="padding-top: 50px;">
+    <p class="float-right"></p>
+    <p>Ⓒ2022-2023 Safe Travels All rights reserved</p>
+</footer>

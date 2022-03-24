@@ -1,0 +1,445 @@
+<div class="ig">
+    <div id="header" style="padding-left: 120px;">
+        <div class="header" style="margin-top: 10px;">
+            <button class="btn btn-danger" type="submit" (click)="Logout()">Logout</button>
+        </div>
+        <h1 align="center">Welcome Admin</h1>
+
+    </div>
+    <div id="login-complete">
+
+
+        <div class="user-functions">
+            <ul>
+                <li><button class="btn btn-info" (click)="show(1)">Add Bus</button></li> <br>
+                <li><button class="btn btn-info" (click)="show(2)">Update Bus</button></li> <br>
+                <li><button class="btn btn-info" (click)="show(3)">Delete Bus</button></li> <br>
+                <!-- <li><button class="btn btn-info" (click)="show(4)">Remove Bus</button></li> <br> -->
+                <li><button class="btn btn-info" (click)="show(5)">Display Bus List</button></li> <br>
+            </ul>
+
+            <div class="background" id="choice1" style="margin-left: 350px; display: none;">
+                <form [formGroup]="addBusForm" (ngSubmit)="addBus()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.busId.errors && 
+                            (addBusForm.controls.busId.touched || addBusForm.controls.busId.dirty)">
+                                Bus ID is required
+                            </div>
+                            <label for="busId" style="background-color:forestgreen; border-radius: 5px;">Bus ID</label>
+                            <input type="number" class="form-control" id="busId" name="busId" placeholder="Bus Number"
+                                formControlName="busId">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.source.errors && 
+                                (addBusForm.controls.source.touched || addBusForm.controls.source.dirty)">
+                                Source is required
+                            </div>
+                            <label for="source" style="background-color:forestgreen; border-radius: 5px;">Source</label>
+                            <input type="text" class="form-control" name="source" id="source" placeholder="Source"
+                                formControlName="source">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.destination.errors && 
+                                (addBusForm.controls.destination.touched || addBusForm.controls.destination.dirty)">
+                                Destination is required
+                            </div>
+                            <label for="source"
+                                style="background-color:forestgreen; border-radius: 5px;">Destination</label>
+                            <input type="text" class="form-control" name="destination" id="destination"
+                                placeholder="Destination" formControlName="destination">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.arrivalTime.errors && 
+                                (addBusForm.controls.arrivalTime.touched || addBusForm.controls.arrivalTime.dirty)">
+                                Arrival Time is required
+                            </div>
+                            <label for="arrivalTime" style="background-color: forestgreen; border-radius: 5px;">Arrival
+                                Time</label>
+                            <input type="text" class="form-control" id="arrivalTime" name="arrivalTime"
+                                formControlName="arrivalTime">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="addBusForm.controls.departureTime.errors && 
+                                (addBusForm.controls.departureTime.touched || addBusForm.controls.departureTime.dirty)">
+                                Departure Time is required
+                            </div>
+                            <label for="departureTime"
+                                style="background-color: forestgreen; border-radius: 5px;">Departure Time</label>
+                            <input type="text" class="form-control" id="departureTime" name="departureTime"
+                                formControlName="departureTime">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.arrivalDate.errors && 
+                                (addBusForm.controls.arrivalDate.touched || addBusForm.controls.arrivalDate.dirty)">
+                                Arrival Date is required
+                            </div>
+                            <label for="arrivalDate" style="background-color: forestgreen; border-radius: 5px;">Arrival
+                                Date</label>
+                            <input type="date" class="form-control" id="arrivalDate" name="arrivalDate"
+                                formControlName="arrivalDate">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="addBusForm.controls.departureDate.errors && 
+                                (addBusForm.controls.departureDate.touched || addBusForm.controls.departureDate.dirty)">
+                                Departure Date is required
+                            </div>
+                            <label for="departureDate"
+                                style="background-color: forestgreen; border-radius: 5px;">Departure Date</label>
+                            <input type="date" class="form-control" id="departureDate" name="departureDate"
+                                formControlName="departureDate">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="addBusForm.controls.availableSeat.errors && 
+                                (addBusForm.controls.availableSeat.touched || addBusForm.controls.availableSeat.dirty)">
+                                Available Seats is required
+                            </div>
+                            <label for="availableSeat"
+                                style="background-color: forestgreen; border-radius: 5px;">Available Seats</label>
+                            <input type="number" class="form-control" id="availableSeat" name="availableSeat"
+                                formControlName="availableSeat">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.totalSeat.errors && 
+                                (addBusForm.controls.totalSeat.touched || addBusForm.controls.totalSeat.dirty)">
+                                Total Seats is required
+                            </div>
+                            <label for="totalSeat" style="background-color: forestgreen; border-radius: 5px;">Total
+                                Seats</label>
+                            <input type="number" class="form-control" id="totalSeat" name="totalSeat"
+                                formControlName="totalSeat">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="addBusForm.controls.baseFare.errors && 
+                            (addBusForm.controls.baseFare.touched || addBusForm.controls.baseFare.dirty)">
+                                Base Fare is required
+                            </div>
+                            <label for="baseFare" style="background-color: forestgreen; border-radius: 5px;">Base
+                                Fare</label>
+                            <input type="number" class="form-control" id="basefare" name="baseFare"
+                                formControlName="baseFare">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="form-check-label" for="busStatus"
+                                style="background-color: forestgreen; border-radius: 5px;">
+                                Bus Status
+                            </label>&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="checkbox" id="busStatus" name="busStatus"
+                                formControlName="busStatus">
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <label class="form-check-label" for="coachBusStatus"
+                                style="background-color: forestgreen; border-radius: 5px;">
+                                Coach Bus Status
+                            </label>&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="checkbox" id="coachBusStatus" name="coachBusStatus"
+                                formControlName="coachBusStatus">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="addBusForm.invalid">Add Bus</button>
+                </form>
+            </div>
+            <div id="choice2" style="display: none; margin-left: 380px;">
+                <form [formGroup]="updateBusForm" (ngSubmit)="updateBus()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div *ngIf="updateBusForm.controls.busId.errors && 
+                            (updateBusForm.controls.busId.touched || updateBusForm.controls.busId.dirty)">
+                                Bus ID is required
+                            </div>
+                            <label for="busId" style="background-color:forestgreen; border-radius: 5px;">Bus ID</label>
+                            <input type="number" class="form-control" id="busId" name="busId" placeholder="Bus Number"
+                                formControlName="busId">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="updateBusForm.controls.source.errors && 
+                                (updateBusForm.controls.source.touched || updateBusForm.controls.source.dirty)">
+                                Source is required
+                            </div>
+                            <label for="source" style="background-color:forestgreen; border-radius: 5px;">Source</label>
+                            <input type="text" class="form-control" name="source" id="source" placeholder="Source"
+                                formControlName="source">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="updateBusForm.controls.destination.errors && 
+                                    (updateBusForm.controls.destination.touched || updateBusForm.controls.destination.dirty)">
+                                Destination is required
+                            </div>
+                            <label for="source"
+                                style="background-color:forestgreen; border-radius: 5px;">Destination</label>
+                            <input type="text" class="form-control" name="destination" id="destination"
+                                placeholder="Destination" formControlName="destination">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="updateBusForm.controls.baseFare.errors && 
+                                (updateBusForm.controls.baseFare.touched || updateBusForm.controls.baseFare.dirty)">
+                                Base Fare is required
+                            </div>
+                            <label for="baseFare" style="background-color: forestgreen; border-radius: 5px;">Base
+                                Fare</label>
+                            <input type="number" class="form-control" id="basefare" name="baseFare"
+                                formControlName="baseFare">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="updateBusForm.controls.arrivalTime.errors && 
+                                (updateBusForm.controls.arrivalTime.touched || updateBusForm.controls.arrivalTime.dirty)">
+                                Arrival Time is required
+                            </div>
+                            <label for="arrivalTime" style="background-color: forestgreen; border-radius: 5px;">Arrival
+                                Time</label>
+                            <input type="text" class="form-control" id="arrivalTime" name="arrivalTime"
+                                formControlName="arrivalTime">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="updateBusForm.controls.departureTime.errors && 
+                                (updateBusForm.controls.departureTime.touched || updateBusForm.controls.departureTime.dirty)">
+                                Departure Time is required
+                            </div>
+                            <label for="departureTime"
+                                style="background-color: forestgreen; border-radius: 5px;">Departure Time</label>
+                            <input type="text" class="form-control" id="departureTime" name="departureTime"
+                                formControlName="departureTime">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="updateBusForm.controls.arrivalDate.errors && 
+                                (updateBusForm.controls.arrivalDate.touched || updateBusForm.controls.arrivalDate.dirty)">
+                                Arrival Date is required
+                            </div>
+                            <label for="arrivalDate" style="background-color: forestgreen; border-radius: 5px;">Arrival
+                                Date</label>
+                            <input type="date" class="form-control" id="arrivalDate" name="arrivalDate"
+                                formControlName="arrivalDate">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="updateBusForm.controls.departureDate.errors && 
+                                (updateBusForm.controls.departureDate.touched || updateBusForm.controls.departureDate.dirty)">
+                                Departure Date is required
+                            </div>
+                            <label for="departureDate"
+                                style="background-color: forestgreen; border-radius: 5px;">Departure Date</label>
+                            <input type="date" class="form-control" id="departureDate" name="departureDate"
+                                formControlName="departureDate">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="updateBusForm.controls.availableSeat.errors && 
+                                (updateBusForm.controls.availableSeat.touched || updateBusForm.controls.availableSeat.dirty)">
+                                Available Seats is required
+                            </div>
+                            <label for="availableSeat"
+                                style="background-color: forestgreen; border-radius: 5px;">Available Seats</label>
+                            <input type="number" class="form-control" id="availableSeat" name="availableSeat"
+                                formControlName="availableSeat">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div *ngIf="updateBusForm.controls.totalSeat.errors && 
+                                (updateBusForm.controls.totalSeat.touched ||updateBusForm.controls.totalSeat.dirty)">
+                                Total Seats is required
+                            </div>
+                            <label for="totalSeat" style="background-color: forestgreen; border-radius: 5px;">Total
+                                Seats</label>
+                            <input type="number" class="form-control" id="totalSeat" name="totalSeat"
+                                formControlName="totalSeat">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="form-check-label" for="busStatus"
+                                style="background-color: forestgreen; border-radius: 5px;">
+                                Bus Status
+                            </label>&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="checkbox" id="busStatus" name="busStatus"
+                                formControlName="busStatus">
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <label class="form-check-label" for="coachBusStatus"
+                                style="background-color: forestgreen; border-radius: 5px;">
+                                Coach Bus Status
+                            </label>&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="checkbox" id="coachBusStatus" name="coachBusStatus"
+                                formControlName="coachBusStatus">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="updateBusForm.invalid">Update Bus</button>
+                </form>
+            </div>
+            <div id="choice3" style="display: none; margin-left: 300px;">
+                <form [formGroup]="deleteBusForm" (ngSubmit)="deleteBus()">
+                    <div >
+                        <div class="form-group col-md-6">
+                            <div *ngIf="deleteBusForm.controls.busId.errors && 
+                            (deleteBusForm.controls.busId.touched || deleteBusForm.controls.busId.dirty)">
+                                Bus ID is required
+                            </div>
+
+                            <label for="busId" class="col-sm-6 col-form-label"
+                                style="background-color: forestgreen; border-radius: 5px; padding-top: 10px; margin-bottom: 10px;">Bus
+                                Id</label>&nbsp;<br>
+                                <input type="number" class="form-control" id="busId" name="busId"
+                                    formControlName="busId">
+                            
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div
+                                *ngIf="deleteBusForm.controls.departureDate.errors && 
+                                    (deleteBusForm.controls.departureDate.touched || deleteBusForm.controls.departureDate.dirty)">
+                                Departure Date is required
+                            </div>
+                            <label for="departureDate" class="col-sm-6 col-form-label"
+                                style="background-color: forestgreen; border-radius: 5px; padding-top: 10px; margin-bottom: 10px;">Departure
+                                Date</label>&nbsp;<br>
+                                
+                                <input type="date" class="form-control" id="departureDate"
+                                    name="departureDate" formControlName="departureDate">
+                            
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary" [disabled]="deleteBusForm.invalid">Delete
+                                Bus</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="choice4" style="display: none; margin-left: 300px;">
+                <form [formGroup]="removeBusForm" (ngSubmit)="removeBus()">
+                    
+                        <div class="form-group col-md-6">
+                            <div *ngIf="removeBusForm.controls.busId.errors && 
+                            (removeBusForm.controls.busId.touched || removeBusForm.controls.busId.dirty)">
+                                Bus ID is required
+                            </div>
+
+                            <label for="busId" class="col-sm-6 col-form-label"
+                                style="background-color: forestgreen; border-radius: 5px; padding-top: 10px; margin-bottom: 10px;">Bus
+                                Id</label>
+                                <input type="number" class="form-control" id="busId" name="busId"
+                                    formControlName="busId">
+                            
+                        </div>
+                        
+                    <div class="form-group col-md-6">
+                        <div
+                            *ngIf="removeBusForm.controls.departureDate.errors && 
+                                (removeBusForm.controls.departureDate.touched || removeBusForm.controls.departureDate.dirty)">
+                            Departure Date is required
+                        </div>
+                        <label for="departureDate" class="col-sm-6 col-form-label"
+                            style="background-color: forestgreen; border-radius: 5px; padding-top: 10px; margin-bottom: 10px;">Departure
+                            Date</label>
+                            
+                            <input type="date" class="form-control" id="departureDate"
+                                name="departureDate" formControlName="departureDate">
+                        
+                    </div>
+
+                    <div class="form-group">
+                        
+                            <label class="form-check-label" for="busStatus"
+                                style="background-color: forestgreen; border-radius: 5px;">
+                                Bus Status
+                            </label>&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="checkbox" id="busStatus" name="busStatus"
+                                formControlName="busStatus">
+                        
+                    </div>
+                
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary"
+                                [disabled]="removeBusForm.invalid">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="choice5" style=" margin-left: 500px;">
+                <table cellpadding=20 cellspacing=30 class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th>Bus Id</th>
+                            <th>Source</th>
+                            <th>Destination</th>
+                            <th>Arrival Time</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Date</th>
+                            <th>Departure Date</th>
+                            <th>Available Seats</th>
+                            <th>Total Seat</th>
+                            <th>Base Fare</th>
+                            <th>Bus Status</th>
+                            <th>Coach Bus Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let bus of Bus1">
+                            <td>{{bus.id}}</td>
+                            <td>{{bus.source}}</td>
+                            <td>{{bus.destination}}</td>
+                            <td>{{bus.arrivalTime}}</td>
+                            <td>{{bus.departureTime}}</td>
+                            <td>{{bus.arrivalDate}}</td>
+                            <td>{{bus.departureDate}}.</td>
+                            <td>{{bus.availableSeat}}</td>
+                            <td>{{bus.totalSeat}}</td>
+                            <td>{{bus.baseFare}}</td>
+                            <td>{{bus.busStatus}}</td>
+                            <td>{{bus.coachBusStatus}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<footer>
+    <p class="float-right"></p>
+    <p>Ⓒ2022-2023 Safe Travels All rights reserved</p>
+</footer>

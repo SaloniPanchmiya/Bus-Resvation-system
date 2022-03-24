@@ -1,0 +1,76 @@
+#header{
+    background-color: #563d7c;
+    padding: 13px;
+}
+#background{
+    background-color: aqua;
+}
+
+.header button{
+    float: right;
+    padding: 5px;
+    font-size : 20px;
+    width: 8%;
+    margin-right: 15px;
+    border-radius: 12px;
+    
+}
+.user-functions{
+    padding-top: 20px;
+    margin: auto;
+    height: 550px;
+    text-align: center;
+    
+}
+.user-functions button{
+    width: 200px;
+    font-size: 20px;
+    border-radius: 12px;
+}
+label{
+    width: 100px;
+    font-size: 10px;
+    border-radius: 12px;
+    color: white;
+    padding: 5px;
+}
+.ig{
+    background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpK_FaHhWoP6l4I1txCy3KpnK6F51omdA92w&usqp=CAU");
+    background-size: cover;
+    height: 950px;
+    max-width: 550 px;
+}
+ul{
+    list-style: none;
+    float: left;
+}
+footer {
+    background-color:  #563d7c;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.form1{
+    padding-top: 50px;
+}
+th{
+	background-color: black;
+	color: white;
+}
+table{
+    width: 500px;
+}
+.form-control{
+    width: 500px;
+}
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+.form-row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+

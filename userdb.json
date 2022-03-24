@@ -1,0 +1,149 @@
+{
+  "customers": [
+    {
+      "firstName": "Saloni",
+      "lastName": "Panchmiya",
+      "emailId": "saloni.panchmiya@gmail.com",
+      "phoneNo": "7020236872",
+      "pass": "123",
+      "DOB": "2022-09-23",
+      "gender": "female",
+      "id": 2
+    },
+    {
+      "firstName": "Saloni",
+      "lastName": "Panchmiya",
+      "emailId": "saloni.panchmiya@gmail.com",
+      "phoneNo": "7020236872",
+      "pass": "65",
+      "DOB": "2022-09-11",
+      "gender": "female",
+      "id": 3
+    },
+    {
+      "firstName": "Saloni",
+      "lastName": "Panchmiya",
+      "emailId": "saloni.panchmiya@gmail.com",
+      "phoneNo": "7020236872",
+      "pass": "65",
+      "DOB": "2022-09-10",
+      "gender": "female",
+      "id": 4
+    },
+    {
+      "firstName": "Saloni",
+      "lastName": "Panchmiya",
+      "emailId": "saloni.panchmiya@gmail.com",
+      "phoneNo": "7020236872",
+      "pass": "77",
+      "DOB": "2022-09-03",
+      "gender": "female",
+      "id": 5
+    },
+    {
+      "firstName": "Saloni",
+      "lastName": "Panchmiya",
+      "emailId": "saloni.panchmiya@gmail.com",
+      "phoneNo": "7020236872",
+      "pass": "55",
+      "DOB": "2022-09-12",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "firstName": "saloni",
+      "lastName": "panchmiya",
+      "emailId": "saloni.panchmiya@gmail.com",
+      "phoneNo": "7020236872",
+      "pass": "44",
+      "DOB": "2022-09-13",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "firstName": "Raj",
+      "lastName": "Ansari",
+      "emailId": "rajanwar113@gmail.com",
+      "phoneNo": "8509228893",
+      "pass": "4321",
+      "DOB": "2020-09-03",
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "firstName": "Gowthami",
+      "lastName": "Kasa",
+      "emailId": "ahanadeb@gmail.com",
+      "phoneNo": "9345012345",
+      "pass": "kasa",
+      "DOB": "2022-10-16",
+      "gender": "female",
+      "id": 9
+    }
+  ],
+  "admin": [
+    {
+      "emailId": "admin@gmail.com",
+      "password": "admin"
+    }
+  ],
+  "buses": [
+    {
+      "id": 1,
+      "source": "Kolkata",
+      "destination": "Pune",
+      "arrivalTime": "11.30 p.m.",
+      "departureTime": "10.00 a.m.",
+      "arrivalDate": "2022-10-03",
+      "departureDate": "2022-10-03",
+      "availableSeat": 30,
+      "totalSeat": 30,
+      "baseFare": 3500,
+      "busStatus": true,
+      "coachBusStatus": ""
+    },
+    {
+      "id": 2,
+      "source": "Kolkata",
+      "destination": "Howrah",
+      "arrivalTime": "11.30 p.m.",
+      "departureTime": "10.00 a.m.",
+      "arrivalDate": "2022-10-17",
+      "departureDate": "2022-10-17",
+      "availableSeat": 30,
+      "totalSeat": 30,
+      "baseFare": 31000,
+      "busStatus": true,
+      "coachBusStatus": true
+    },
+    {
+      "id": 3,
+      "source": "Kolkata",
+      "destination": "Digha",
+      "arrivalTime": "11.30 p.m.",
+      "departureTime": "10.00 a.m.",
+      "arrivalDate": "2022-10-09",
+      "departureDate": "2022-10-09",
+      "availableSeat": 30,
+      "totalSeat": 30,
+      "baseFare": 4000,
+      "busStatus": true,
+      "coachBusStatus": ""
+    },
+    {
+      "busId": 5,
+      "source": "Kolkata",
+      "destination": "Darjeeling",
+      "arrivalTime": "11.30 p.m.",
+      "departureTime": "10.00 a.m.",
+      "arrivalDate": "2022-10-31",
+      "departureDate": "2022-10-30",
+      "availableSeat": 30,
+      "totalSeat": 30,
+      "baseFare": 4000,
+      "busStatus": true,
+      "coachBusStatus": "",
+      "id": 4
+    }
+  ]
+}

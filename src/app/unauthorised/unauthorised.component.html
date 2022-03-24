@@ -1,0 +1,66 @@
+<header>
+
+    <!-- our main logo -->
+    <a id="logo" href="home-page">
+        <img src="assets/bus logo.jpg" alt="Logo">
+        
+    </a>
+  
+    <!-- main navigation links -->
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="about-page">About Us</a></li>
+            <li><a href="contact-page">Contact Us</a></li>
+            <li><a href="cancel-ticket">Cancel Ticket</a></li>
+            <li><a href="register-page">Register</a></li>
+            <li><a href="login-page">Login</a></li>
+         </ul>
+    </nav>
+  </header><div id="ig">
+    <div class="container">
+    <div class="alert alert-primary" style="margin-top: 50px; background-color: indigo; color: cornsilk;">
+        <h3>Passenger Details</h3>
+    </div>
+    <form [formGroup]="passengerForm" (ngSubmit)="addPassenger()">
+    <div class="form-group">
+        <div *ngIf="passengerForm.controls.emailId.errors && 
+        (passengerForm.controls.emailId.touched || passengerForm.controls.emailId.dirty)" style="color: red;">
+            Email Id is required
+        </div>
+        <label for="emailId">Email Id</label>
+        <input class="form-control" type="text" name="emailId" id="emailId" formControlName="emailId">
+    </div>
+    <div class="form-group">
+        <div *ngIf="passengerForm.controls.firstName.errors && 
+                (passengerForm.controls.firstName.touched || passengerForm.controls.firstName.dirty)" style="color: red;">
+            First Name is required
+        </div>
+        <label for="firstName">First Name</label>
+        <input class="form-control" type="text" name="firstName" id="firsttName" formControlName="firstName">
+    </div>
+    <div class="form-group">
+        <div *ngIf="passengerForm.controls.lastName.errors && 
+                (passengerForm.controls.lastName.touched || passengerForm.controls.lastName.dirty)" style="color: red;">
+            Last Name is required
+        </div>
+        <label for="lastName">Last Name</label>
+        <input class="form-control" type="text" name="lastName" id="lastName" formControlName="lastName">
+    </div>
+    <div class="form-group">
+        <div *ngIf="passengerForm.controls.phoneNo.errors && 
+                (passengerForm.controls.phoneNo.touched || passengerForm.controls.phoneNo.dirty)" style="color: red;">
+            Phone Number is required
+        </div>
+        <label for="phoneNo">Phone Number</label>
+        <input class="form-control" type="number" name="phoneNo" id="phoneNo" formControlName="phoneNo">
+    </div>
+    <input type="submit" value="Proceed to payment" class="btn btn-primary" [disabled]="passengerForm.invalid">
+    </form>
+    </div>
+    </div>
+    <footer>
+        <p></p>
+        <p>Ⓒ2022-2023 Safe Travel All rights reserved</p>
+    </footer>
+    
